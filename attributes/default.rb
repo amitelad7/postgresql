@@ -70,3 +70,27 @@ else
   default[:postgresql][:version] = "8.4"
   set[:postgresql][:dir]         = "/etc/postgresql/#{node[:postgresql][:version]}/main"
 end
+
+
+default[:postgresql][:access_method] = "md5"
+default[:postgresql][:listen_address] = "localhost"
+default[:postgresql][:max_connections] = 100
+
+default[:postgresql][:shared_buffers] = "24MB"
+default[:postgresql][:effective_cache_size] = "128MB"
+default[:postgresql][:work_mem] = "1MB"
+default[:postgresql][:checkpoint_segments] = 3
+default[:postgresql][:wal_buffers] = "64kB"
+
+default[:postgresql][:default_statistics_target] = 10
+default[:postgresql][:synchronous_commit] = "on"
+default[:postgresql][:statement_timeout] = 0
+
+default[:postgresql][:log_line_prefix] = '%t '
+default[:postgresql][:log_min_duration_statement] = -1
+default[:postgresql][:logging_collector] = "off"
+
+default[:postgresql][:lc_messages] = 'en_US.UTF-8'
+default[:postgresql][:lc_monetary] = 'en_US.UTF-8'
+default[:postgresql][:lc_numeric] = 'en_US.UTF-8'
+default[:postgresql][:lc_time] = 'en_US.UTF-8'
