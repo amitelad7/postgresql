@@ -443,11 +443,11 @@ datestyle = 'iso, mdy'
 					# encoding
 
 # These settings are initialized by initdb, but they can be changed.
-lc_messages = '<%= node.postgresql.statement_timeout %>'		# locale for system error message
+lc_messages = '<%= node.postgresql.lc_messages %>'		# locale for system error message
 					# strings
-lc_monetary = '<%= node.postgresql.statement_timeout %>'		# locale for monetary formatting
-lc_numeric = '<%= node.postgresql.statement_timeout %>'		# locale for number formatting
-lc_time = '<%= node.postgresql.statement_timeout %>'		# locale for time formatting
+lc_monetary = '<%= node.postgresql.lc_monetary %>'		# locale for monetary formatting
+lc_numeric = '<%= node.postgresql.lc_numeric %>'		# locale for number formatting
+lc_time = '<%= node.postgresql.lc_time %>'		# locale for time formatting
 
 # default configuration for text search
 default_text_search_config = 'pg_catalog.english'
